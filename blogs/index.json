@@ -1,0 +1,30 @@
+[
+  {
+    "title": "CringeShieldX : Defender Against Cringe Content",
+    "slug": "cringe-shield-x",
+    "author": "Nur Tasin",
+    "author_short": "NT",
+    "tags": [
+      "JS",
+      "TamperMonkey",
+      "Automation"
+    ],
+    "synopsis": "CringeShieldX is a browser extension that filters out cringe-worthy YouTube content. Customize block lists, install via Tampermonkey, and enjoy cringe-free browsing.",
+    "blog_img": "https://thumbs2.imgbox.com/40/e7/jAVxkRi3_t.png",
+    "added_on": 1723753771
+  },
+  {
+    "title": "Managing User Sessions using raw expressjs",
+    "slug": "device-session-management",
+    "author": "Nur Tasin",
+    "author_short": "NT",
+    "tags": [
+      "JS",
+      "TamperMonkey",
+      "Automation"
+    ],
+    "synopsis": "CringeShieldX is a browser extension that filters out cringe-worthy YouTube content. Customize block lists, install via Tampermonkey, and enjoy cringe-free browsing.",
+    "blog_img": "https://thumbs2.imgbox.com/40/e7/jAVxkRi3_t.png",
+    "added_on": 1723753771
+  }
+]
