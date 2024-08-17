@@ -1,0 +1,96 @@
+---
+title: "Automating Blog Management with Blogger.js"
+author: Nur Tasin
+author_short: NT
+synopsis: Automates blog index generation, Git commits, pushes, and server cache flushing for streamlined content management and deployment.
+blog_img: https://thumbs2.imgbox.com/40/e7/jAVxkRi3_t.png
+tags: JS, Blogging, Automation
+added_on: 1723887777
+---
+`blogger.js` is a Node.js script designed to automate the process of managing and deploying blog content. It allows for the generation of a JSON index for all blog posts, automates Git commits and pushes, and provides a mechanism to flush the server cache after updates.
+
+## Features
+
+- **Generate Blog Index**: Scans the `./blogs/raw/` directory for blog files, extracts metadata, and creates an index in `./blogs/index.json`.
+- **Commit and Push**: Automates the process of committing blog updates to a Git repository and pushing to the remote origin.
+- **Server Cache Flush**: Triggers a server cache flush via a webhook after pushing updates.
+
+## Requirements
+
+- Node.js
+- Git
+- An environment variable `BLOG_FLUSH_WEBHOOK` in a `.env` file to handle server cache flushing.
+
+## Installation
+
+1. Clone the repository or copy the script into your project.
+2. Ensure you have a `.env` file in the root of your project with the following content:
+   ```plaintext
+   BLOG_FLUSH_WEBHOOK=<Your webhook URL>
+   ```
+3. Install the necessary Node.js dependencies by running:
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+You can run the script with various options to control its behavior.
+
+### Available Commands
+
+- **Generate Index**
+  ```bash
+  node blogger.js --generate
+  ```
+  This command scans the `./blogs/raw/` directory for blog files and generates an index in `./blogs/index.json`. This is the default behavior.
+
+- **Skip Generation**
+  ```bash
+  node blogger.js --skip-generate
+  ```
+  Skips the index generation step. Use this if you do not need to regenerate the index.
+
+- **Commit Changes**
+  ```bash
+  node blogger.js --commit --commit-msg "Your commit message"
+  ```
+  Commits changes in the `./blogs/` directory with an optional commit message. If no commit message is provided, an auto-generated one will be used.
+
+- **Push Changes**
+  ```bash
+  node blogger.js --push
+  ```
+  Pushes the committed changes to the remote Git repository.
+
+- **Flush Server Cache**
+  ```bash
+  node blogger.js --flush-server-cache
+  ```
+  Prompts for a server secret and triggers a cache flush via the configured webhook.
+
+- **Verbose Output**
+  ```bash
+  node blogger.js --verbose
+  ```
+  Enables verbose logging for debugging purposes.
+
+### Example Usage
+
+1. Generate an index, commit, and push changes:
+   ```bash
+   node blogger.js --commit --push
+   ```
+
+2. Generate an index, commit with a custom message, push, and flush server cache:
+   ```bash
+   node blogger.js --commit --commit-msg "Updated blog index" --push --flush-server-cache
+   ```
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+---
+
+This script is intended to streamline the process of managing a blog. Contributions and feedback are welcome!
