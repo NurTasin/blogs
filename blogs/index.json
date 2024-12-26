@@ -40,5 +40,19 @@
     "synopsis": "Automates blog index generation, Git commits, pushes, and server cache flushing for streamlined content management and deployment.",
     "blog_img": "https://thumbs2.imgbox.com/40/e7/jAVxkRi3_t.png",
     "added_on": 1723887777
+  },
+  {
+    "title": "Test Blog : Explaining Thing To Saroar",
+    "slug": "test-blog",
+    "author": "Nur Tasin",
+    "author_short": "NT",
+    "tags": [
+      "JS",
+      "TamperMonkey",
+      "Automation"
+    ],
+    "synopsis": "CringeShieldX is a browser extension that filters out cringe-worthy YouTube content. Customize block lists, install via Tampermonkey, and enjoy cringe-free browsing.",
+    "blog_img": "https://thumbs2.imgbox.com/40/e7/jAVxkRi3_t.png",
+    "added_on": 1735190429
   }
 ]
